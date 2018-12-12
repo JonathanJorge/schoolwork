@@ -1,0 +1,26 @@
+<!Doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title></title>
+	<meta http-equiv="content-type"     content="text/html; charset=iso-8859-1" /> 
+
+	</head>
+	<body>
+<input type="text" value="First Name" id="FName"/>
+	<br>
+<input type="text" value="Last Name" id="LName"/>
+	<br>
+<input type="text" value="Age" id="Age"/>
+	<br>
+	<input type="button" value="Convert" onclick="q ()"></input>
+	<br>
+<input type="text" value="Age in Days" id="AgeInDays"/>
+	<script type="text/javascript">
+
+	 function q ()
+	 {	var age = parseInt(document.getElementById("Age").value);
+	 document.getElementById("AgeInDays").value = age * 365; 
+	 }
+	</script>
+</body>
+</html>
