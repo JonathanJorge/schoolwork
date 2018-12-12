@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="myProject">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  </head>
+  
+  <body ng-app="myProject">
+  
+    <div>
+      <form action="/action_page.php">
+      <input type="text" disabled="true" value="Sign in | Logins: 0" id="dis1">
+        <br>
+      <input type="text" disabled="true" value="Welcome, new user!" id="dis2">
+        <br>
+      </form>
+      <script type="text/javascript">
+        (function nyef() {
+          var app = angular.module('myProject',[]);
+          app.controller('ProjectController',['$scope',function ($scope){
+          
+            $scope.username = "New User";
+            $scope.logincount = 0;
+            document.getElementById('dis1').value = $scope.username + " | Logins: " + $scope.logincount;
+            document.getElementById('dis2').value = "Welcome, " + $scope.username + "!";
+            
+              //start of onclick
+              
+            document.getElementById('button').onclick = function () {
+              if ($scope.logincount == 0){
+                  $scope.assignedname = document.getElementById('uname').value;
+                  $scope.assignedpass = document.getElementById('pass').value;
+                  
+                  $scope.username = $scope.assignedname;
+                  $scope.password = $scope.assignedpass;
+              }
+              if (document.getElementById('uname').value != $scope.assignedname){
+                  document.getElementById('errorname').value = "Incorrect Username";
+                  document.getElementById('errorpass').value = "";
+              }
+              else if (document.getElementById('pass').value != $scope.assignedpass){
+                  document.getElementById('errorname').value = "";
+                  document.getElementById('errorpass').value = "Incorrect Password";
+              }
+              else {
+                  document.getElementById('errorpass').value = "";
+                  document.getElementById('errorname').value = "";
+                  
+                  $scope.logincount++;
+                  $scope.username = document.getElementById('uname').value;
+                  $scope.password = document.getElementById('pass').value;
+                  
+                  document.getElementById('dis1').value = $scope.username + " | Logins: " + $scope.logincount;
+                  document.getElementById('dis2').value = "Welcome, " + $scope.username + "!";
+                  
+                  if ($scope.logincount == 1){
+                      document.getElementById('dis3').value = "Congratulations on";
+                      document.getElementById('dis4').value = "logging in for the first time!";
+                      document.getElementById('dis5').value = "There are 9 more levels";
+                  }
+                  if ($scope.logincount == 2){
+                      document.getElementById('dis3').value = "Sorry for the Password being";
+                      document.getElementById('dis4').value = "visible, making those use the";
+                      document.getElementById('dis5').value = "dot things is too hard.";
+                  }
+                  if ($scope.logincount == 3){
+                      document.getElementById('dis3').value = "I hope that it doesn't take";
+                      document.getElementById('dis4').value = "too much away from the app.";
+                      document.getElementById('dis5').value = "I did my best on it, otherwise.";
+                  }
+                  if ($scope.logincount == 4){
+                      document.getElementById('dis3').value = "Anyways, I forgot how fun";
+                      document.getElementById('dis4').value = "it is to actually use html and";
+                      document.getElementById('dis5').value = "do coding. It's been too long";
+                  }
+                  if ($scope.logincount == 5){
+                      document.getElementById('dis3').value = "Too many classes with essays";
+                      document.getElementById('dis4').value = "and busy work making it hard";
+                      document.getElementById('dis5').value = "to remember everything.";
+                  }
+                  if ($scope.logincount == 6){
+                      document.getElementById('dis3').value = "This class in particular";
+                      document.getElementById('dis4').value = "was kinda annoying with";
+                      document.getElementById('dis5').value = "all the dumb installations.";
+                  }
+                  if ($scope.logincount == 7){
+                      document.getElementById('dis3').value = "I don't think it's really asking";
+                      document.getElementById('dis4').value = "too much to have this stuff";
+                      document.getElementById('dis5').value = "installed prior to the start.";
+                  }
+                  if ($scope.logincount == 8){
+                      document.getElementById('dis3').value = "I hope you're enjoying the";
+                      document.getElementById('dis4').value = "flavor text, at least.";
+                      document.getElementById('dis5').value = "I know I definitely am.";
+                  }
+                  if ($scope.logincount == 9){
+                      document.getElementById('dis3').value = "I used textboxes for this";
+                      document.getElementById('dis4').value = "since I didn't know how";
+                      document.getElementById('dis5').value = "to change the text in <p>'s";
+                  }
+                  if ($scope.logincount == 10){
+                      document.getElementById('dis3').value = "You made it to the end of";
+                      document.getElementById('dis4').value = "the demo, good job!";
+                      document.getElementById('dis5').value = "#MEAN is mean";
+                  }
+                  if ($scope.logincount > 10){
+                      document.getElementById('dis3').value = "This is as far as the demo";
+                      document.getElementById('dis4').value = "goes, hope you enjoyed it";
+                      document.getElementById('dis5').value = "while it lasted!";
+                  }
+                  
+                  document.getElementById('uname').value = "";
+                  document.getElementById('pass').value = "";
+                  }
+              };
+              //end of onclick
+              
+          }]);
+      })();
+    </script>
+  </div>
+  
+  <div ng-controller="ProjectController">
+    <form action="/action_page.php">
+    Username: <input type="text" name="fname" id="uname">
+      <input type="text" id="errorname" disabled="true"><br>
+    Password: <input type="text" name="lname" id="pass">
+      <input type="text" id="errorpass" disabled="true"><br>
+      <input type="text" disabled="true" value="You'll have to remember what" id="dis3"><br>
+      <input type="text" disabled="true" value="your Username and" id="dis4"><br>
+      <input type="text" disabled="true" value="Password are." id="dis5"><br>
+      <input type="button" value="Log in" id="button" onclick=" ()">
+    </form>
+  </div>
+  
+  </body>
+</html>
