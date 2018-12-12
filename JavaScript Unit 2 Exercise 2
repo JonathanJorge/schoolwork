@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+	<head>
+	<title>Even Numbers</title>
+	<meta http-equiv="content-type"     content="text/html; charset=iso-8859-1" /> 
+
+	</head>
+	<body>
+	
+	<script type="text/javascript"> /* <![CDATA[ */ /* */ /* ]]> */ 
+
+	</script>
+	
+    
+    
+    <form action="">
+<input type="checkbox" name="vehicle" value="Bike" 
+onclick ="window.open ( 'http://www.staggeringbeauty.com/','_blank')" >
+Many seizures<br>
+
+<input type="checkbox" name="vehicle" value="Car"
+onclick="window.open ( 'http://www.rrrgggbbb.com/','_blank')">
+Color thingy<br>
+
+<input type="checkbox" name="vehicle" value="Car" 
+onclick="window.open ( 'http://ducksarethebest.com/','_blank')">
+Quack<br>
+
+<input type="checkbox" name="vehicle" value="Car"
+onclick="window.open ( 'http://endless.horse/','_blank')">
+Try to reach the bottom<br>
+
+<input type="checkbox" name="vehicle" value="Car"
+onclick="window.open ( 'http://chrismckenzie.com/','_blank')">
+=D<br>
+
+<input type="checkbox" name="vehicle" value="Car"
+onclick="window.open ( 'http://www.pointerpointer.com/','_blank')">
+It will always find you<br>
+
+
+</form>
+</body>
+</html>
