@@ -1,0 +1,41 @@
+//1---------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form action="thisisdumb.php" method="get" >
+<input type="text" id="hours" name="hours"  /> Enter how many hours you've worked
+<p></p>
+<input type="text" id="wage" name="wage"  />Enter what your hourly wage is
+<p></p>
+<input type="submit" value="Calculate" />
+</form>
+</body>
+</html>
+
+//2--------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Box Array</title>
+</head>
+<body>
+<?php
+$killme = array( 
+array("small", 12,10,2.5),
+array("medium", 30,20,4),
+array("large", 60,40,11.5));
+$smallVolume = $killme[0][1] * $killme[0][2] * $killme[0][3];
+$mediumVolume = $killme[1][1] * $killme[1][2] * $killme[1][3];
+$largeVolume = $killme[2][1] * $killme[2][2] * $killme[2][3];
+echo "Small volume is: ";
+echo $smallVolume;
+echo "<p>Medium volume is: ";
+echo $mediumVolume;
+echo "</p><p>Large volume is: ";
+echo $largeVolume;
+?>
+</body>
+</html>
