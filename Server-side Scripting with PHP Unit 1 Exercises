@@ -1,0 +1,110 @@
+//1-----------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Single Family Home</title>
+</head>
+<body>
+<?php
+$SingleFamilyHome = 0;
+$SingleFamilyHome = 399500;
+$SingleFamilyHome_Print = number_format($SingleFamilyHome,2);
+echo "<p>The current median price of a single family home in Pleasanton, CA is 
+$$SingleFamilyHome_Print.</p>";
+?>
+</body>
+</html>
+
+//2-----------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coast City Computers</title>
+</head>
+<body>
+<?php
+include("inc_header.php");
+?>
+<h2>Memorial Day</h2>
+<ul>
+<li>Compaq Presario m2007us Notebook:
+<strong>$799.99</strong></li>
+<li>Epson Stylus CX6600 Color All-In-One Printer, 
+Print/Copy/Scan: <strong>$699.99</strong></li>
+<li>Proview Technology Inc. KDS K715s 17-inch LCD
+Monitor, Silver/Black: <strong>$199.99</strong></li>
+<li>Hawing Technology Hi-Speed Wireless-G Cardbus Card: <strong>$9.99</strong></li>
+</ul>
+<?php
+include("inc_footer.php");
+?>
+</body>
+</html>
+
+<table width="100%" style="border: 0">
+<tr><td><h1>Coast City Computers</h1></td>
+<td style="text-align: right"<strong>Buy Online or 
+Call 1-800-555-1212</strong></td></tr></table><hr />
+
+<hr />
+<table width="100%" style="border: 0">
+<tr><td><strong>Updated</strong>&nbsp;06 January, 2010</td>
+<td style="text-align: right">&copy; 2003 by Coast City Computers.</td>
+</tr>
+<tr><td><a href="http://validator.w3.org/check/referer"><img 
+src="http://www.w3.org/Icons/valid-xhtml10"
+alt="Valid XHTML 1.0!" height="31"
+width="88" /></a>
+</td>
+<td style="text-align: right; vertical-align: 
+top">All Right Reserved.</td></tr>
+</table>
+
+//3----------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>While Logic</title>
+</head>
+<body>
+<?php
+$Count = 0;
+while ($Count < 100) {
+$Numbers[] = $Count;
+++$Count;
+echo "<p>$Count</p>";
+}
+?>
+<!-- the foreach loop wasn't necessary, and made it fail -->
+</body>
+</html>
+
+//4-----------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compare Strings</title>
+</head>
+<body>
+<?php
+$firstString = "This is fun";
+$secondString = "This is not";
+if(!empty($firstString) && !empty($secondString)) {
+	if($firstString == $secondString)
+		echo"<p>Both strings are the same.</p>";
+	else {
+		echo "<p>Both strings have " 
+. similar_text($firstString, $secondString) . 
+" character(s) in common.<br />";
+		echo "<p>You must change " 
+. levenshtein($firstString, $secondString) . 
+" character(s) to make the strings the same.<br />";
+ 	}
+}
+else
+	echo "<p>Either the \$firstString variable or the \$secondString 
+variable does not contain a value so the two strings cannot be compared.
+</p>";
+?>
+</body>
+</html>
