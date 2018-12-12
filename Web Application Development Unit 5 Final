@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="pFinal">
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  </head>
+  
+  <body ng-controller="finalController">
+  
+    <script type="text/javascript">
+      (function () {
+        var app = angular.module('pFinal',[]);
+        app.controller('finalController', ['$scope', function ($scope){
+        
+          var startingMilk = 0;
+          var startingEggs = 0;
+          var startingBread = 0;
+          document.getElementById('milkp').innerHTML = startingMilk;
+          document.getElementById('eggp').innerHTML = startingEggs;
+          document.getElementById('breadp').innerHTML = startingBread;
+          
+          document.getElementById('Milk').onclick = function () {
+            document.getElementById('milknum').disabled = false;
+            document.getElementById('eggnum').disabled = true;
+            document.getElementById('breadnum').disabled = true;
+            
+            document.getElementById('Eggs').checked = false;
+            document.getElementById('Bread').checked = false;
+            
+            document.getElementById('eggnum').value = "";
+            document.getElementById('breadnum').value = "";
+            
+            document.getElementById('errorp').innerHTML = "";
+          };
+          
+          document.getElementById('Eggs').onclick = function () {
+            document.getElementById('milknum').disabled = true;
+            document.getElementById('eggnum').disabled = false;
+            document.getElementById('breadnum').disabled = true;
+            
+            document.getElementById('Milk').checked = false;
+            document.getElementById('Bread').checked = false;
+            
+            document.getElementById('milknum').value = "";
+            document.getElementById('breadnum').value = "";
+            
+            document.getElementById('errorp').innerHTML = "";
+          };
+          
+          document.getElementById('Bread').onclick = functon () {
+            document.getElementById('milknum').disabled = true;
+            document.getElementById('eggnum').disabled = true;
+            document.getElementById('breadnum').disabled = false;
+            
+            document.getElementById('Eggs').checked = false;
+            document.getElementById('Milk').checked = false;
+            
+            document.getElementById('milknum').value = "";
+            document.getElementById('eggnum').value = "";
+            
+            document.getElementById('errorp').innerHTML = "";
+          };
+          
+          document.getElementById('+').onclick = function () {
+            if (document.getElementById('Milk').checked == true) {
+              var milkCount = parseInt(document.getElementById('milknum').value);
+              startingMilk = startingMilk + milkCount;
+              document.getElementById('milkp').innerHTML = startingMilk;
+            }
+            
+            else if (document.getElementById('Eggs').checked == true) {
+              var eggCount = parseInt(document.getElementById('eggnum').value);
+              startingEggs = startingEggs + eggCount;
+              document.getElementById('eggp').innerHTML = startingEggs;
+            }
+            
+            else if (document.getElementById('Bread').checked == true) {
+              var breadCount = parseInt(document.getElementById('breadnum').value);
+              startingBread = startingBread + breadCount;
+              document.getElementById('breadp').innerHTML = startingBread;
+            }
+            
+            else {
+              document.getElementById('errorp').innerHTML = "Please select an item";
+            }
+          };
+          
+          document.getElementById('/').onclick = function () {
+            if (document.getElementById('Milk').checked == true) {
+              startingMilk = 0;
+              document.getElementById('milknum').value = "";
+              document.getElementById('milkp').innerHTML = startingMilk;
+            }
+            
+            else if (document.getElementById('Eggs').checked == true) {
+              startingEggs = 0;
+              document.getElementById('eggnum').value = "";
+              document.getElementById('eggp').innerHTML = startingEggs;
+            }
+            
+            else if (document.getElementById('Bread').checked == true) {
+              startingBread = 0;
+              document.getElementById('breadnum').value = "";
+              document.getElementById('breadp').innerHTML = startingBread;
+            }
+            
+            else {
+              document.getElementById('errorp').innerHTML = "Please select an item";
+            }
+          };
+          
+          document.getElementById('-').onclick = function () {
+            if (document.getElementById('Milk').checked == true) {
+              var milkCount = parseInt(document.getElementById('milknum').value);
+              startingMilk = startingMilk - milkCount;
+              if (startingMilk < 0){
+                  startingMilk = 0;
+              }
+              document.getElementById('milkp').innerHTML = startingMilk;
+            }
+            
+            else if (document.getElementById('Eggs').checked == true) {
+              var eggCount = parseInt(document.getElementById('eggnum').value);
+              startingEggs = startingEggs - eggCount;
+              if (startingEggs < 0){
+                  startingEggs = 0;
+              }
+              document.getElementById('eggp').innerHTML = startingEggs;
+            }
+            
+            else if (document.getElementById('Bread').checked == true) {
+              var breadCount = parseInt(document.getElementById('breadnum').value);
+              startingBread = startingBread - breadCount;
+              if (startingBread < 0){
+                  startingBread = 0;
+              }
+              document.getElementById('breadp').innerHTML = startingBread;
+            }
+            
+            else {
+              document.getElementById('errorp').innerHTML = "Please select an item";
+            }
+          };
+        }]);
+      })();
+    </script>
+    
+    <input type="radio" id="Milk">Milk
+    <p id="milkp">0</p>
+    <input type="number" id="milknum" disabled="true"><br><br>
+    <input type="radio" id="Eggs">Eggs
+    <p id="eggp">0</p>
+    <input type="number" id="eggnum" disabled="true"<br><br>
+    <input type="radio" id="Bread">Bread
+    <p id="breadp">0</p>
+    <input type="number" id="breadnum" disabled="true"><br><br>
+    <input type="button" value="+" id="+">
+    <input type="button" value="/" id="/">
+    <input type="button" value="-" id="-">
+    <p id="errorp"></p>
+  </body>
+</html>
