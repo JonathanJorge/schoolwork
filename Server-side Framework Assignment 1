@@ -1,0 +1,261 @@
+//Separate files marked with ------------------------------------
+//Cart.aspx.cs---------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Cart : System.Web.UI.Page
+{
+    private CartItemList cart;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        cart = CartItemList.GetCart();
+        if (!IsPostBack)
+            this.DisplayCart();
+    }
+
+    private void DisplayCart()
+    {
+        lstCart.Items.Clear();
+        CartItem item;
+        for (int i = 0; i < cart.Count; i++)
+        {
+            item = cart[i];
+            lstCart.Items.Add(item.Display());
+        }
+    }
+
+    protected void btnRemove_Click(object sender, EventArgs e)
+    {
+        if (cart.Count > 0)
+        {
+            if (lstCart.SelectedIndex > -1)
+            {
+                cart.RemoveAt(lstCart.SelectedIndex);
+                this.DisplayCart();
+            }
+            else
+            {
+                lblMessage.Text = "Please select the item you want to remove.";
+            }
+        }
+    }
+
+    protected void btnEmpty_Click(object sender, EventArgs e)
+    {
+        if (cart.Count > 0)
+        {
+            cart.Clear();
+            lstCart.Items.Clear();
+        }
+    }
+
+    protected void btnCheckOut_Click(object sender, EventArgs e)
+    {
+        lblMessage.Text = "Sorry, that function hasn't been "
+                        + "implemented yet.";
+    }
+}
+//Order.aspx.cs------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+
+public partial class Order : System.Web.UI.Page
+{
+    private Product selectedProduct;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+            ddlProducts.DataBind();
+
+        selectedProduct = this.GetSelectedProduct();
+        lblName.Text = selectedProduct.Name;
+        lblShortDescription.Text = selectedProduct.ShortDescription;
+        lblLongDescription.Text = selectedProduct.LongDescription;
+        lblUnitPrice.Text = selectedProduct.UnitPrice.ToString("c");
+        imgProduct.ImageUrl = "Images/Products/" + selectedProduct.ImageFile;
+    }
+
+    private Product GetSelectedProduct()
+    {
+        DataView productsTable = (DataView)
+            AccessDataSource1.Select(DataSourceSelectArguments.Empty);
+        productsTable.RowFilter =
+            "ProductID = '" + ddlProducts.SelectedValue + "'";
+        DataRowView row = (DataRowView)productsTable[0];
+
+        Product p = new Product();
+        p.ProductID = row["ProductID"].ToString();
+        p.Name = row["Name"].ToString();
+        p.ShortDescription = row["ShortDescription"].ToString();
+        p.LongDescription = row["LongDescription"].ToString();
+        p.UnitPrice = (decimal)row["UnitPrice"];
+        p.ImageFile = row["ImageFile"].ToString();
+        return p;
+    }
+
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        CartItemList cart = CartItemList.GetCart();
+        CartItem cartItem = cart[selectedProduct.ProductID];
+
+        if (cartItem == null)
+            cart.AddItem(selectedProduct, Convert.ToInt32(txtQuantity.Text));
+        else
+            cartItem.AddQuantity(Convert.ToInt32(txtQuantity.Text));
+
+        Response.Redirect("Cart.aspx");
+    }
+}
+//Cart.aspx-------------------------------------------------
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Cart.aspx.cs" Inherits="Cart" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Chapter 3: Shopping Cart</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 285px;
+            height: 155px;
+        }
+        .style2
+        {
+            height: 155px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Image ID="Image1" runat="server"
+            ImageUrl="~/Images/banner.jpg" /><br /><br />
+        Your shopping cart:<br /><br />
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="style1" valign="top">
+                    <asp:ListBox ID="lstCart" runat="server"
+                        Height="135px" Width="275px"></asp:ListBox>
+                </td>
+                <td class="style2" valign="top">
+                    <asp:Button ID="btnRemove" runat="server"
+                        Text="Remove Item" Width="100px" onclick="btnRemove_Click" /><br /><br />
+                    <asp:Button ID="btnEmpty" runat="server"
+                        Text="Empty Cart" Width="100px" onclick="btnEmpty_Click" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <asp:Button ID="btnContinue" runat="server"
+            PostBackUrl="~/Order.aspx" Text="Continue Shopping" />&nbsp;
+        <asp:Button ID="btnCheckOut" runat="server" Text="Check Out" 
+            onclick="btnCheckOut_Click" /><br />
+        <br />
+        <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
+    </div>
+    </form>
+</body>
+</html>
+
+//Order.aspx------------------------------------------------------------------
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Order.aspx.cs" Inherits="Order" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Chapter 3: Shopping Cart</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 250px;
+        }
+        .style2
+        {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Image ID="Image1" runat="server" 
+            ImageUrl="~/Images/banner.jpg" /><br /><br />
+        <asp:Label ID="Label1" runat="server" 
+            Text="Please select a product:"></asp:Label>&nbsp;
+        <asp:DropDownList ID="ddlProducts" runat="server" 
+            DataSourceID="AccessDataSource1" DataTextField="Name" 
+            DataValueField="ProductID" Width="150px" AutoPostBack="True">
+        </asp:DropDownList>
+        <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
+            DataFile="~/App_Data/Halloween.mdb" 
+            SelectCommand="SELECT [ProductID], [Name], [ShortDescription],
+                [LongDescription], [ImageFile], [UnitPrice]
+                FROM [Products] ORDER BY [Name]">
+        </asp:AccessDataSource>
+        <br />
+        <table>
+            <tr>
+                <td class="style1">
+                    <asp:Label ID="lblName" runat="server" 
+                        Font-Bold="True" Font-Size="Larger">
+                    </asp:Label>
+                </td>
+                <td class="style2" rowspan="4">
+                </td>
+                <td rowspan="4" valign="top">
+                    <asp:Image ID="imgProduct" runat="server" Height="200px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    <asp:Label ID="lblShortDescription" runat="server">
+                    </asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    <asp:Label ID="lblLongDescription" runat="server">
+                    </asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    <asp:Label ID="lblUnitPrice" runat="server" 
+                        Font-Bold="True" Font-Size="Larger">
+                    </asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="each" 
+                        Font-Bold="True" Font-Size="Larger">
+                    </asp:Label>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Quantity:"></asp:Label>&nbsp;
+        <asp:TextBox ID="txtQuantity" runat="server" Width="40px">
+        </asp:TextBox>
+        <br /><br />
+        <asp:Button ID="btnAdd" runat="server" Text="Add to Cart" 
+            onclick="btnAdd_Click" />&nbsp;
+        <asp:Button ID="Button1" runat="server" CausesValidation="False" 
+            PostBackUrl="~/Cart.aspx" Text="Go to Cart" />
+    </div>
+        <asp:Label ID="lblCompanyName" runat="server" Text="Halloween Store"></asp:Label>
+    </form>
+</body>
+</html>
