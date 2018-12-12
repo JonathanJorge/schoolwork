@@ -1,0 +1,736 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta http-equiv="content-type"     content="text/html; charset=iso-8859-1" /> 
+			<script type="text/javascript"> 
+			</script>
+	</head> 
+	<body> 
+
+	<table style="width:100%">
+  <tr>
+    <th>
+		<select id="t" name="brand" >
+			<option value="a" id="t1">Object 1</option>
+			<option value="s" id="t2">Object 2</option>
+			<option value="d" id="t3">Object 3</option>
+			<option value="f" id="t4">Object 4</option>
+			<option value="z" id="t5">Object 5</option>
+			<option value="q" id="t6"></option>
+			<option value="h" id="t7"></option>
+			<option value="l" id="t8"></option>
+			<option value="m" id="t9"></option>
+			<option value="p" id="t10"></option>
+			
+		</select>
+	</th>
+    <th></th> 
+    <th>
+		<select id="tt">
+			<option value="aa" id="t1a">Product 1</option>
+			<option value="sa" id="t2a">Product 2</option>
+			<option value="da" id="t3a">Product 3</option>
+			<option value="fa" id="t4a">Product 4</option>
+			<option value="za" id="t5a">Product 5</option>
+			<option value="qa" id="t6a"> </option>
+			<option value="ha" id="t7a"> </option>
+			<option value="la" id="t8a"> </option>
+			<option value="ma" id="t9a"> </option>
+			<option value="pa" id="t10a"> </option>
+			
+		</select>
+	</th>
+  </tr>
+  <tr>
+    <td></td>
+    <th>
+	<!-- onclick="z ()" -->
+	<input type="button" id="LButton" value="<<" onclick="z ()"></input>
+	<input type="button" id="RButton" value=">>" onclick="a ()"></input>
+	</th> 
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+	</td> 
+    <td></td>
+  </tr>
+</table>
+	
+		<script type="text/javascript"> 
+		function z ()
+		{if (document.getElementById("tt").selectedIndex == 0 && document.getElementById("t1a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t1a").innerHTML;
+				document.getElementById("t1a").innerHTML = "";}}
+		else if (document.getElementById("t1a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 1 && document.getElementById("t2a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t2a").innerHTML;
+				document.getElementById("t2a").innerHTML = "";}}
+		else if (document.getElementById("t2a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 2 && document.getElementById("t3a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t3a").innerHTML;
+				document.getElementById("t3a").innerHTML = "";}}
+		else if (document.getElementById("t3a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 3 && document.getElementById("t4a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t4a").innerHTML;
+				document.getElementById("t4a").innerHTML = "";}}
+		else if (document.getElementById("t4a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 4 && document.getElementById("t5a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t5a").innerHTML;
+				document.getElementById("t5a").innerHTML = "";}}
+		else if (document.getElementById("t5a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 5 && document.getElementById("t6a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t6a").innerHTML;
+				document.getElementById("t6a").innerHTML = "";}}
+		else if (document.getElementById("t6a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 6 && document.getElementById("t7a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t7a").innerHTML;
+				document.getElementById("t7a").innerHTML = "";}}
+		else if (document.getElementById("t7a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 7 && document.getElementById("t8a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t8a").innerHTML;
+				document.getElementById("t8a").innerHTML = "";}}
+		else if (document.getElementById("t8a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 8 && document.getElementById("t9a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t9a").innerHTML;
+				document.getElementById("t9a").innerHTML = "";}}
+		else if (document.getElementById("t1a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == ""  && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("tt").selectedIndex == 9 && document.getElementById("t10a").innerHTML != "")
+			{if (document.getElementById("t1").innerHTML == ""){
+				document.getElementById("t1").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t2").innerHTML == ""){
+				document.getElementById("t2").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t3").innerHTML == ""){
+				document.getElementById("t3").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t4").innerHTML == ""){
+				document.getElementById("t4").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t5").innerHTML == ""){
+				document.getElementById("t5").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t6").innerHTML == ""){
+				document.getElementById("t6").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t7").innerHTML == ""){
+				document.getElementById("t7").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t8").innerHTML == ""){
+				document.getElementById("t8").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t9").innerHTML == ""){
+				document.getElementById("t9").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}
+							else if (document.getElementById("t10").innerHTML == ""){
+				document.getElementById("t10").innerHTML = document.getElementById("t10a").innerHTML;
+				document.getElementById("t10a").innerHTML = "";}}
+		else if (document.getElementById("t10a").innerHTML == "" && document.getElementById("t1").innerHTML == ""  && document.getElementById("t2").innerHTML == ""  && document.getElementById("t3").innerHTML == ""  && document.getElementById("t4").innerHTML == ""  && document.getElementById("t5").innerHTML == "" && document.getElementById("t6").innerHTML == ""  && document.getElementById("t7").innerHTML == ""  && document.getElementById("t8").innerHTML == ""  && document.getElementById("t9").innerHTML == ""  && document.getElementById("t10").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		
+		}
+		
+		function a ()
+		{
+		if (document.getElementById("t").selectedIndex == 0 && document.getElementById("t1").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t1").innerHTML;
+				document.getElementById("t1").innerHTML = "";}}
+		else if (document.getElementById("t1").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == "" && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 1 && document.getElementById("t2").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t2").innerHTML;
+				document.getElementById("t2").innerHTML = "";}}
+		else if (document.getElementById("t2").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 2 && document.getElementById("t3").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t3").innerHTML;
+				document.getElementById("t3").innerHTML = "";}}
+		else if (document.getElementById("t3").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 3 && document.getElementById("t4").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t4").innerHTML;
+				document.getElementById("t4").innerHTML = "";}}
+		else if (document.getElementById("t4").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 4 && document.getElementById("t5").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t5").innerHTML;
+				document.getElementById("t5").innerHTML = "";}}
+		else if (document.getElementById("t5").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 5 && document.getElementById("t6").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t6").innerHTML;
+				document.getElementById("t6").innerHTML = "";}}
+		else if (document.getElementById("t6").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 6 && document.getElementById("t7").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t7").innerHTML;
+				document.getElementById("t7").innerHTML = "";}}
+		else if (document.getElementById("t7").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 7 && document.getElementById("t8").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t8").innerHTML;
+				document.getElementById("t8").innerHTML = "";}}
+		else if (document.getElementById("t8").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 8 && document.getElementById("t9").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t9").innerHTML;
+				document.getElementById("t9").innerHTML = "";}}
+/* */		else if (document.getElementById("t1").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		if (document.getElementById("t").selectedIndex == 9 && document.getElementById("t10").innerHTML != "")
+			{if (document.getElementById("t1a").innerHTML == ""){
+				document.getElementById("t1a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t2a").innerHTML == ""){
+				document.getElementById("t2a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t3a").innerHTML == ""){
+				document.getElementById("t3a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t4a").innerHTML == ""){
+				document.getElementById("t4a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t5a").innerHTML == ""){
+				document.getElementById("t5a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t6a").innerHTML == ""){
+				document.getElementById("t6a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t7a").innerHTML == ""){
+				document.getElementById("t7a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t8a").innerHTML == ""){
+				document.getElementById("t8a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t9a").innerHTML == ""){
+				document.getElementById("t9a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}
+							else if (document.getElementById("t10a").innerHTML == ""){
+				document.getElementById("t10a").innerHTML = document.getElementById("t10").innerHTML;
+				document.getElementById("t10").innerHTML = "";}}
+		else if (document.getElementById("t10").innerHTML == "" && document.getElementById("t1a").innerHTML == "" && document.getElementById("t2a").innerHTML == "" && document.getElementById("t3a").innerHTML == "" && document.getElementById("t4a").innerHTML == "" && document.getElementById("t5a").innerHTML == ""  && document.getElementById("t6a").innerHTML == ""  && document.getElementById("t7a").innerHTML == ""  && document.getElementById("t8a").innerHTML == ""  && document.getElementById("t9a").innerHTML == ""  && document.getElementById("t10a").innerHTML == "")
+		{alert("You cannot pass a blank argument");}
+		
+		}
+		</script>
+ 
+		<script type="text/javascript"> 
+		</script>
+
+	</body> 
+</html>
