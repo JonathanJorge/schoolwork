@@ -1,0 +1,14 @@
+<!Doctype html>
+<html>
+	<head>
+		<script type="text/javascript">
+		var f = 98.6;
+		var c = (f-32)*(5/9);
+		
+		
+		document.writeln("<h3> Degrees in Celsius = " + c + "</h3>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
